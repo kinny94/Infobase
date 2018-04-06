@@ -9,7 +9,7 @@ class Landing extends Component{
                         <div className="bg">
                             <img src="https://www.bleepstatic.com/content/hl-images/2016/12/23/Steam-Logo.jpg" alt="" />
                             <div className="overlay">
-                                <a className="custombutton custombutton-white custombutton-big">Steam Info</a>
+                                <a href="" className="custombutton custombutton-white custombutton-big">Steam Info</a>
                             </div>
                         </div>
                     </div>

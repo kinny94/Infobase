@@ -1,19 +1,22 @@
 {
-  "name": "infobase",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "^4.0.0",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "react-scripts": "1.1.4",
-    "semantic-ui": "^2.3.1",
-    "velocity": "^0.7.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+	"name": "infobase",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kinny94/Infobase.git"
+	},
+	"author": "Arjun Dass",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/kinny94/Infobase/issues"
+	},
+	"homepage": "https://github.com/kinny94/Infobase#readme",
+	"dependencies": {
+		"express": "^4.16.3"
+	}
 }

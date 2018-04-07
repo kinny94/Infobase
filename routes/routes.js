@@ -7,7 +7,6 @@ module.exports = ( app ) => {
 
     app.get( '/steam', ( req, res ) => {
         res.send( "Place for Steam!!");
-        console.log( routes );
     });
 
     app.get( '/github', ( req, res ) => {

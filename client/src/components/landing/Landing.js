@@ -9,7 +9,7 @@ class Landing extends Component{
                         <div className="bg">
                             <img src="https://www.bleepstatic.com/content/hl-images/2016/12/23/Steam-Logo.jpg" alt="" />
                             <div className="overlay">
-                                <a href="" className="custombutton custombutton-white custombutton-big">Steam Info</a>
+                                <a href="/steam" className="custombutton custombutton-white custombutton-big">Steam Info</a>
                             </div>
                         </div>
                     </div>
@@ -17,7 +17,7 @@ class Landing extends Component{
                         <div className="bg">
                             <img src="https://linuxforlyf.files.wordpress.com/2017/10/github-universe1.jpg" alt="" />
                             <div className="overlay">
-                                <a className="custombutton custombutton-white custombutton-big">Github Info</a>
+                                <a href="/github" className="custombutton custombutton-white custombutton-big">Github Info</a>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,15 @@
-import React, { Compponent } from 'react';
+import React, { Component } from 'react';
 
 class Github extends Component{
 
+    constructor( props ){
+        super( props );
+        this.state = { };
+    }
+
+    componentWillMount(){
+        console.log( this.state );
+    }
     render(){
         return(
             <div class="container">

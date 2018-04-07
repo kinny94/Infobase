@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter, } from 'react-dom'
 
 class Landing extends Component{
     render(){

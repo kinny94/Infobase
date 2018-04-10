@@ -7,13 +7,19 @@ class Github extends Component{
         this.state = { };
     }
 
-    componentWillMount(){
-        console.log( this.state );
+    componentDidMount(){
+        fetch('/github').then(( res ) => {
+           return res.json(); 
+        }).then(( data ) => {
+            this.setState({
+                github: data.github
+            });
+        });
     }
     render(){
         return(
             <div className="container">
-                <h2>Place github stuff here!!</h2>
+                <h2>{ this.state.github }</h2>
             </div>
         )
     }

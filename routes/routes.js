@@ -6,10 +6,10 @@ module.exports = ( app ) => {
     });
 
     app.get( '/steam', ( req, res ) => {
-        res.send( "Place for Steam!!");
+        res.send({ "steam": "You will get steam data here!!" });
     });
 
     app.get( '/github', ( req, res ) => {
-        res.send("Place for Github!!");
+        res.send({ "github": "You will get github data here!!"});
     });
 }

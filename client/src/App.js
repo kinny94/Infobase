@@ -14,7 +14,7 @@ class App extends Component {
 			<div className="App">
 				<BrowserRouter>
 					<div className="container">
-						<Route path="/" component={ Landing }/>
+						<Route path="/" exact component={ Landing 	 }/>
 						<Route path="/steam" exact component={ Steam } />
 						<Route path="/github" exact component={ Github } />
 					</div>

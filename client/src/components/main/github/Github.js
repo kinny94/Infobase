@@ -12,7 +12,7 @@ class Github extends Component{
     }
     render(){
         return(
-            <div class="container">
+            <div className="container">
                 <h2>Place github stuff here!!</h2>
             </div>
         )

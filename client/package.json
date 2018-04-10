@@ -2,12 +2,15 @@
 	"name": "infobase",
 	"version": "0.1.0",
 	"private": true,
-	"proxy":{
-		"/steam": {
+	"proxy": {
+		"/":{
 			"target": "http://localhost:5000"
 		},
-		"/github": {
+		"/api/*": {
 			"target": "http://localhost:5000"
+		},
+		"/steam": {
+			"target": "http://localhost:5000/steam"
 		}
 	},
 	"dependencies": {

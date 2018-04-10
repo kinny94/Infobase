@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, } from 'react-dom'
+import { Link } from 'react-router-dom';
 
 class Landing extends Component{
     render(){
@@ -10,7 +10,7 @@ class Landing extends Component{
                         <div className="bg">
                             <img src="https://www.bleepstatic.com/content/hl-images/2016/12/23/Steam-Logo.jpg" alt="" />
                             <div className="overlay">
-                                <a href="/steam" className="custombutton custombutton-white custombutton-big">Steam Info</a>
+                                <Link to= { '/steam' } className="custombutton custombutton-white custombutton-big">Steam Info</Link>
                             </div>
                         </div>
                     </div>
@@ -18,7 +18,7 @@ class Landing extends Component{
                         <div className="bg">
                             <img src="https://linuxforlyf.files.wordpress.com/2017/10/github-universe1.jpg" alt="" />
                             <div className="overlay">
-                                <a href="/github" className="custombutton custombutton-white custombutton-big">Github Info</a>
+                                <Link to={ '/github' }  className="custombutton custombutton-white custombutton-big">Github Info</Link>
                             </div>
                         </div>
                     </div>

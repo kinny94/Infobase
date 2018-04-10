@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Steam extends Component{
-
-    componentsWillMount(){
-        
-    }
-
     render(){
-
         return(
-            <div>
-                <h2>Place Steam Stuff here!!</h2>
+            <div className="container">
+                <h2>Place for steam stuff!!</h2>
             </div>
         )
     }

@@ -10,6 +10,7 @@ class Steam extends Component{
     }
 
     componentDidMount(){
+        
         fetch( '/steam' ).then(( res ) => {
             return res.json();
         }).then(( data ) => {

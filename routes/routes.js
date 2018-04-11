@@ -12,4 +12,17 @@ module.exports = ( app ) => {
     app.get( '/github', ( req, res ) => {
         res.send({ "github": "You will get github data here!!"});
     });
+
+    app.get( '/movies', ( req, res ) => {
+        res.send({ "movies": "You will get the movies information here!!" });
+    });
+
+    app.get( '/music', ( req, res ) => {
+        res.send({ "music": "You will get the music information here!!" });
+    });
+
+    app.get( '/weather', ( req, res ) => {
+        res.send({ "weather": "You will get the weather iinformation here!! "});
+    });
+
 }

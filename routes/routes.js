@@ -25,4 +25,15 @@ module.exports = ( app ) => {
         res.send({ "weather": "You will get the weather iinformation here!! "});
     });
 
+    app.get( '/books', ( req, res ) => {
+        res.send({ "books": "You will get the books infromations here!!" });
+    });
+
+    app.get( '/googleplus', ( req, res ) => {
+        res.send({ "googleplus": "You will get googleplus information here!!"  });
+    });
+
+    app.get( '/expedia', ( req, res ) => {
+        res.send({ "expedia": "You will get expedia information here!! "});
+    });
 }

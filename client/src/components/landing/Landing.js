@@ -54,9 +54,28 @@ class Landing extends Component{
                     </div>
                     <div className="col-md-6">
                         <div className="bg">
-                            <img src="https://d85wutc1n854v.cloudfront.net/live/products/600x375/WB0PGGM81.png?v=1.0" alt="" />
+                            <img src="https://studybreaks.com/wp-content/uploads/2017/08/books.jpg" alt="" />
                             <div className="overlay">
-                                <Link to={ '/music' }  className="custombutton custombutton-white custombutton-big">Music Info</Link>
+                                <Link to={ '/books' }  className="custombutton custombutton-white custombutton-big">Books Info</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-6">
+                        <div className="bg">
+                            <img src="https://cdn.ndtv.com/tech/images/gadgets/google-plus.jpg" alt="" />
+                            <div className="overlay">
+                                <Link to= { '/googleplus' } className="custombutton custombutton-white custombutton-big">Google Plus Info</Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="bg">
+                            <img src="https://www.affirm.com/images/buy-with-affirm/featured-stores/expedia.png" alt="" />
+                            <div className="overlay">
+                                <Link to={ '/expedia' }  className="custombutton custombutton-white custombutton-big">Expedia Info</Link>
                             </div>
                         </div>
                     </div>

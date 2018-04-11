@@ -6,7 +6,10 @@ import Feed from './feed/Feed';
 
 class Steam extends Component{
 
-    state = {};
+    key = "5A73D5947715DAECB09BBCE5C4948CC3";
+    state = {
+        showNews: false
+    };
 
     constructor( props ){
         super( props );
@@ -23,6 +26,13 @@ class Steam extends Component{
         })
     }
 
+    renderComponent(){
+        if( this.state.showNews ){
+            return <Feed />
+        }else{
+            return <h2>I will show user stats here!!</h2>
+        }
+    }
     render(){
         return(
             <div className="container">
@@ -31,7 +41,7 @@ class Steam extends Component{
                     <Search />
                 </div>
                 <div className="row">
-                    <Feed />
+                    { this.renderComponent() } 
                 </div>
             </div>
         )

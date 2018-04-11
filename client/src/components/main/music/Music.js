@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
 
+import Main from './components/Main';
+
 class Music extends Component{
 
-    state = [];
+    state = {};
+
+    componentWillMount(){
+        document.body.classList.add( 'music-background' );
+    }
+
+    componentWillUnmount(){
+        document.body.classList.remove( 'modal-background' );
+    }
 
     componentDidMount(){
         fetch( '/music' ).then(( res ) => {
@@ -15,8 +25,8 @@ class Music extends Component{
     }
     render(){
         return(
-            <div>
-                <h2>{ this.state.music }</h2>
+            <div style={ {backgroundImage: `url(require("image.jpg"))`}}className="container">
+                <Main />
             </div>
         )
     }

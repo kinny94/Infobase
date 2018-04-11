@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 class Search extends Component{
 
 
-    state = {};
+    state = {
+    };
 
     constructor( props ){
         super( props );
     }
-    
+
     render(){
         return(
             <div className="col-md-12">

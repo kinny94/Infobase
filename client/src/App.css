@@ -1,7 +1,7 @@
  .bg, .overlay {
 	text-align: center;
 }
-img, .overlay {
+.image, .overlay {
 	transition: 0.3s all;
 	border-radius: 3px;
 	height: 250px;
@@ -13,7 +13,7 @@ img, .overlay {
 	position: relative;
 	margin: 5%;
 }
-.bg img {
+.bg .image {
 	width: 100%;
 	margin-bottom: -4px;
 }
@@ -38,7 +38,7 @@ img, .overlay {
 .bg:hover .overlay {
 	opacity: 1;
 }
-.bg:hover img {
+.bg:hover .image {
 	-webkit-filter: blur(2px);
 	filter: blur(2px);
 }
@@ -176,5 +176,29 @@ input[type="submit"]:hover,
     color: #fff;
 }
 
+/*------------------------------------------------------*/
+/* MUSIC */
+/*------------------------------------------------------*/
 
 
+.heading-padding{
+    padding: 10px;
+}
+
+.table-padding{
+    padding-top: 20px;
+}
+
+.music-background{
+    background: url('./assets/images/image.jpg');
+    font-size: 18px;
+    padding: 0px; 
+    margin:0px; 
+    background:url('./assets/images/image.jpg') ;
+    background-position: center; 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    text: white;
+    color: white;
+}

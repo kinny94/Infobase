@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"proxy": {
-		"/":{
+		"/": {
 			"target": "http://localhost:5000"
 		},
 		"/api/*": {
@@ -21,17 +21,20 @@
 		"/movies": {
 			"target": "http://localhost:5000/movies             "
 		},
-		"/weather":{
+		"/weather": {
 			"target": "http://localhost:5000/weather"
 		}
 	},
 	"dependencies": {
+		"axios": "^0.18.0",
 		"bootstrap": "^4.0.0",
 		"react": "^16.3.1",
 		"react-dom": "^16.3.1",
 		"react-scripts": "1.1.4",
 		"semantic-ui": "^2.3.1",
-		"velocity": "^0.7.2"
+		"velocity": "^0.7.2",
+		"velocity-animate": "^1.5.1",
+		"velocity-react": "^1.3.3"
 	},
 	"scripts": {
 		"start": "react-scripts start",

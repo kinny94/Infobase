@@ -2,29 +2,6 @@
 	"name": "infobase",
 	"version": "0.1.0",
 	"private": true,
-	"proxy": {
-		"/": {
-			"target": "http://localhost:5000"
-		},
-		"/api/*": {
-			"target": "http://localhost:5000"
-		},
-		"/steam": {
-			"target": "http://localhost:5000/steam"
-		},
-		"/music": {
-			"target": "http://localhost:5000/music"
-		},
-		"/github": {
-			"target": "http://localhost:5000/github"
-		},
-		"/movies": {
-			"target": "http://localhost:5000/movies             "
-		},
-		"/weather": {
-			"target": "http://localhost:5000/weather"
-		}
-	},
 	"dependencies": {
 		"axios": "^0.18.0",
 		"bootstrap": "^4.0.0",

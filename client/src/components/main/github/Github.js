@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Main from './components/Main';
 class Github extends Component{
 
     constructor( props ){
@@ -7,19 +7,10 @@ class Github extends Component{
         this.state = { };
     }
 
-    componentDidMount(){
-        fetch('/github').then(( res ) => {
-           return res.json(); 
-        }).then(( data ) => {
-            this.setState({
-                github: data.github
-            });
-        });
-    }
     render(){
         return(
             <div className="container">
-                <h2>{ this.state.github }</h2>
+                <Main />
             </div>
         )
     }

@@ -11,7 +11,7 @@ class Music extends Component{
     }
 
     componentWillUnmount(){
-        document.body.classList.remove( 'modal-background' );
+        document.body.classList.remove( 'music-background' );
     }
 
     componentDidMount(){

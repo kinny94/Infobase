@@ -36,7 +36,7 @@ class Search extends Component{
             <div id="animate">
                 <form onSubmit={ this.handleSubmit }>
                     <div className="input-group">
-                        <input className="form-control form-control-lg" placeholder="Search for an artist.." type="text"
+                        <input className="form-control form-control-lg" placeholder="Search for an artist, song, album...." type="text"
                         value={ this.state.value } onChange={ this.handleChange } />
                         <span className="input-group-btn">
                             <button className="btn btn-outline-secondary" type="submit ">

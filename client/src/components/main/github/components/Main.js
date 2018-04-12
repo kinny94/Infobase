@@ -56,10 +56,16 @@ class Main extends Component{
         var { isLoading, userdata, initialState, reposdata } = this.state;
 
         function renderMessage(){
+
+            if( initialState ){
+                return null;
+            }
+
             if( isLoading ){
                 return <h2>Fetching Data...</h2>
             }else{
-                if( userdata === null ){
+
+                if( userdata === null && !isLoading){
                     return <h2>No Records found!!</h2>
                 }else{
                     return <SearchResults userdata={ userdata } reposdata={ reposdata }/>

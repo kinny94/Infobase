@@ -202,3 +202,29 @@ input[type="submit"]:hover,
     text: white;
     color: white;
 }
+
+/*------------------------------------------------------*/
+/* Github */
+/*------------------------------------------------------*/
+
+.user-button{
+    width: 77%;
+    margin-top: 5px;
+}
+
+.github-background{
+    background: url('./assets/images/github-image.jpg');
+    font-size: 14px;
+    padding: 0px; 
+    margin:0px; 
+    background:url('./assets/images/github-image.jpg') ;
+    background-position: center; 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+}
+
+.github-background h1, h2{
+    text: white;
+    color: white;
+}

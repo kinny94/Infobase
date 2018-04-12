@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+
 import fetchData from '../api/fetchData';
+import User from './user/User';
+import Repos from './repos/Repos';
 
 class SearchResults extends Component{
 
@@ -30,11 +33,33 @@ class SearchResults extends Component{
         });
     }
 
+    renderData(){
+
+        const margin = {
+            marginTop: "5px"
+        }
+        
+        if( this.state.reposdata === '' ){
+            return <h2>Fetchin user repositories...</h2>
+        }else{
+            return(
+                <div className="container-fluid">
+                    <div><User userdata={ this.state.userdata }/></div>
+                    <div style={ margin }><Repos reposdata={ this.state.reposdata }/></div>
+                </div>
+            )
+        }
+    }
+
     render(){
         
-        return(
-            <div>
+        const margin = {
+            marginTop: "10px"
+        }
 
+        return(
+            <div style={ margin }>
+                { this.renderData() }
             </div>
         )
     }

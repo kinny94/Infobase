@@ -11,9 +11,19 @@ class Search extends Component{
     }
 
     render(){
+
+        const margin = {
+            marginTop: "10%"
+        }
+
         return(
-            <div className="col-md-12">
-                <h2>Search user id's here!!!</h2>
+            <div style={ margin } className="row">
+                <div className="col">
+                    <h2>Search for a username...!!</h2>
+                </div>
+                <div className="col">
+                    <h2>Search for a game...!!</h2>
+                </div>
             </div>
         )
     }

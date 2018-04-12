@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Search from './search/Search';
 import Feed from './feed/Feed';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Steam extends Component{
 
@@ -16,32 +17,33 @@ class Steam extends Component{
     }
 
     componentDidMount(){
-        
-        fetch( '/steam' ).then(( res ) => {
-            return res.json();
+
+    fetch('http://store.steampowered.com/api/featured/', {mode: 'no-cors'})
+        .then(function(response) {
+            return response.text(); 
         }).then(( data ) => {
-            this.setState({
-                steam: data.steam
-            })
-        })
+            console.log( data );
+        }).catch(function(error) {  
+            console.log('Request failed', error)  
+        });
     }
 
-    renderComponent(){
-        if( this.state.showNews ){
-            return <Feed />
-        }else{
-            return <h2>I will show user stats here!!</h2>
-        }
+    componentWillMount(){
+        document.body.classList.add( 'steam-background' );
     }
+
+    componentWillUnmount(){
+        document.body.classList.remove( 'steam-background' );
+    }
+
     render(){
         return(
             <div className="container">
-                <h2>{ this.state.steam }</h2>
-                <div className="row">
+               <div>
                     <Search />
-                </div>
-                <div className="row">
-                    { this.renderComponent() } 
+               </div>
+                <div>
+                    <Feed />
                 </div>
             </div>
         )

@@ -228,3 +228,20 @@ input[type="submit"]:hover,
     text: white;
     color: white;
 }
+
+
+/*------------------------------------------------------*/
+/* Steam */
+/*------------------------------------------------------*/
+
+.steam-background{
+    background: url('./assets/images/steam-image.png');
+    font-size: 14px;
+    padding: 0px; 
+    margin:0px; 
+    background:url('./assets/images/steam-image.png') ;
+    background-position: center; 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+}

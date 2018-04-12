@@ -11,7 +11,8 @@ class Main extends Component{
         isLoading: '',
         userdata: '',
         heading: 'Search for any github user!!',
-        initialState: true
+        initialState: true,
+        reposdata: ''
     
     };
 
@@ -33,7 +34,6 @@ class Main extends Component{
         });
 
         fetchData.getUserData( username ).then(( userdata ) => {
-
             
             this.setState({
                 initialState: false,
@@ -53,14 +53,17 @@ class Main extends Component{
 
     render(){
 
-        var { isLoading, userdata, initialState } = this.state;
+        var { isLoading, userdata, initialState, reposdata } = this.state;
 
         function renderMessage(){
             if( isLoading ){
                 return <h2>Fetching Data...</h2>
             }else{
-
-               
+                if( userdata === null ){
+                    return <h2>No Records found!!</h2>
+                }else{
+                    return <SearchResults userdata={ userdata } reposdata={ reposdata }/>
+                }
             }
         }
 

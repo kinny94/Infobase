@@ -1,31 +1,23 @@
 {
 	"name": "infobase",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"start": "node index.js",
-		"server": "nodemon index.js",
-		"client": "npm run start --prefix client",
-		"dev": "concurrently \"npm run server\" \"npm run client\""
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/kinny94/Infobase.git"
-	},
-	"author": "Arjun Dass",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/kinny94/Infobase/issues"
-	},
-	"homepage": "https://github.com/kinny94/Infobase#readme",
+	"version": "0.1.0",
+	"private": true,
 	"dependencies": {
-		"concurrently": "^3.5.1",
-		"express": "^4.16.3",
-		"index.js": "0.0.3",
-		"nodemon": "^1.17.3",
+		"axios": "^0.18.0",
+		"bootstrap": "^4.0.0",
+		"react": "^16.3.1",
 		"react-dom": "^16.3.1",
 		"react-router-dom": "^4.2.2",
-		"velocity-animate": "^1.5.1"
+		"react-scripts": "1.1.4",
+		"semantic-ui": "^2.3.1",
+		"velocity": "^0.7.2",
+		"velocity-animate": "^1.5.1",
+		"velocity-react": "^1.3.3"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
 	}
 }

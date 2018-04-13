@@ -18,7 +18,7 @@ class Steam extends Component{
 
     componentDidMount(){
 
-    fetch('http://store.steampowered.com/api/featured/', {mode: 'no-cors'})
+    fetch('https://store.steampowered.com/api/featured/', {mode: 'no-cors'})
         .then(function(response) {
             console.log( response );
         }).catch(function(error) {  

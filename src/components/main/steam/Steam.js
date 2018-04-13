@@ -6,44 +6,59 @@ import Feed from './feed/Feed';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Steam extends Component{
-
+    
     key = "5A73D5947715DAECB09BBCE5C4948CC3";
     state = {
-        showNews: false
+        featuredData: ''
     };
-
+    
     constructor( props ){
         super( props );
     }
-
-    componentDidMount(){
-
-    fetch('https://store.steampowered.com/api/featured/', {mode: 'no-cors'})
     
+    componentDidMount(){
+        
+        var proxyUrl = 'https://glacial-eyrie-67068.herokuapp.com/';
+        let targetUrl = 'https://store.steampowered.com/api/featured';
 
-        .then(function(response) {
-            console.log( response );
-        }).catch(function(error) {  
-            console.log('Request failed', error)  
+        fetch(proxyUrl + targetUrl)
+        .then(blob => blob.json())
+        .then(data => {
+            this.setState({
+                featuredData: data
+            });
+            console.log( this.state.featuredData );
+        })
+        .catch(e => {
+            console.log(e);
+            return e;
         });
     }
-
+    
     componentWillMount(){
         document.body.classList.add( 'steam-background' );
     }
-
+    
     componentWillUnmount(){
         document.body.classList.remove( 'steam-background' );
+    }
+    
+    renderComponent(){
+        if( this.state.featuredData === '' ){
+            return <h2>Getting featured items....</h2>
+        }else{
+            return <Feed featuredData={ this.state.featuredData }/>
+        }
     }
 
     render(){
         return(
             <div className="container">
-               <div>
-                    <Search />
-               </div>
                 <div>
-                    <Feed />
+                    <Search />
+                </div>
+                <div>
+                    { this.renderComponent() }
                 </div>
             </div>
         )

@@ -12,7 +12,6 @@
 		"react-dom": "^16.3.1",
 		"react-router-dom": "^4.2.2",
 		"react-scripts": "1.1.4",
-		"semantic-ui": "^2.3.1",
 		"velocity": "^0.7.2",
 		"velocity-animate": "^1.5.1",
 		"velocity-react": "^1.3.3"

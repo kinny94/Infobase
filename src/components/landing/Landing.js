@@ -27,7 +27,7 @@ class Landing extends Component{
                 <div className="row">
                     <div className="col-md-6">
                         <div className="bg">
-                            <img className="image" src="https://essayden.com/wp-content/uploads/2017/12/movies.jpg" alt="" />
+                            <img className="image" src="http://essayden.com/wp-content/uploads/2017/12/movies.jpg" alt="" />
                             <div className="overlay">
                                 <Link to= { '/movies' } className="custombutton custombutton-white custombutton-big">Movies Info</Link>
                             </div>

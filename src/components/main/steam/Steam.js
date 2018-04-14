@@ -27,7 +27,6 @@ class Steam extends Component{
             this.setState({
                 featuredData: data
             });
-            console.log( this.state.featuredData );
         })
         .catch(e => {
             console.log(e);

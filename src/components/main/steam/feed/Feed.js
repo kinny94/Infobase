@@ -3,6 +3,14 @@ import React, { Component } from 'react';
 class Feed extends Component{
 
     
+    renderFeed(){
+    }
+
+    componentDidMount(){
+        const feedData = this.props.featureData;
+        console.log( feedData );
+    }
+    
     render(){
         const img = {
             height: "200px"

@@ -56,6 +56,7 @@ class Steam extends Component{
                 <div>
                     <Search />
                 </div>
+                <hr className="hr-steam" />
                 <div>
                     { this.renderComponent() }
                 </div>

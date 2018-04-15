@@ -2,7 +2,7 @@
 	"name": "infobase",
 	"version": "0.1.0",
 	"engines": {
-		"node": "8.9.4"		
+		"node": "8.9.4"
 	},
 	"private": true,
 	"dependencies": {
@@ -10,8 +10,10 @@
 		"bootstrap": "^4.0.0",
 		"react": "^16.3.1",
 		"react-dom": "^16.3.1",
+		"react-responsive-carousel": "^3.1.36",
 		"react-router-dom": "^4.2.2",
 		"react-scripts": "1.1.4",
+		"styled-components": "^3.2.5",
 		"velocity": "^0.7.2",
 		"velocity-animate": "^1.5.1",
 		"velocity-react": "^1.3.3"

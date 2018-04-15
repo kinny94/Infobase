@@ -8,11 +8,11 @@ class Feed extends Component{
 
         return windowsFeaturedData.map( game => {
             return (
-                <div className="card" key={ game.id }>
+                <div className="steam-card" key={ game.id }>
                     <img src={ game.header_image }/> 
                     <div>
-                        <a href={`http://store.steampowered.com/app/${ game.id }`}><h4 className="float-left card-text">{ game.name }</h4></a>     
-                        <h4 className="float-right card-text">${ game.final_price / 100 }</h4>
+                        <a href={`http://store.steampowered.com/app/${ game.id }`}><h4 className="float-left steam-card-text">{ game.name }</h4></a>     
+                        <h4 className="float-right steam-card-text">${ game.final_price / 100 }</h4>
                     </div>
                 </div>
             )
@@ -24,11 +24,11 @@ class Feed extends Component{
         const linuxFeaturedData = this.props.featuredData.featured_linux;
         return linuxFeaturedData.map( game => {
             return (
-                <div className="card" key={ game.id }>
+                <div className="steam-card" key={ game.id }>
                     <img src={ game.header_image }/>
                     <div>
-                        <a href={`http://store.steampowered.com/app/${ game.id }`}><h4 className="float-left card-text">{ game.name }</h4></a>     
-                        <h4 className="float-right card-text">${ game.final_price / 100 }</h4>
+                        <a href={`http://store.steampowered.com/app/${ game.id }`}><h4 className="float-left steam-card-text">{ game.name }</h4></a>     
+                        <h4 className="float-right steam-card-text">${ game.final_price / 100 }</h4>
                     </div>
                 </div>
             )
@@ -40,11 +40,11 @@ class Feed extends Component{
         const macFeaturedData = this.props.featuredData.featured_mac;
         return macFeaturedData.map( game => {
             return (
-                <div className="card" key={ game.id }>
+                <div className="steam-card" key={ game.id }>
                     <img src={ game.header_image }/>
                     <div>
-                        <a href={`http://store.steampowered.com/app/${ game.id }`}><h4 className="float-left card-text">{ game.name }</h4></a>     
-                        <h4 className="float-right card-text">${ game.final_price / 100 }</h4>
+                        <a href={`http://store.steampowered.com/app/${ game.id }`}><h4 className="float-left steam-card-text">{ game.name }</h4></a>     
+                        <h4 className="float-right steam-card-text">${ game.final_price / 100 }</h4>
                     </div>
                 </div>
             )
@@ -64,19 +64,19 @@ class Feed extends Component{
                 <div className="col text-center">
                     <h5>Featured games for windows.</h5> 
                 </div>   
-                <div className="row">
+                <div className="steam-row">
                     { this.renderWindowsFeatured() }
                 </div>
                 <div className="col text-center">
                     <h5>Featured games for Linux.</h5> 
                 </div>
-                <div className="row">
+                <div className="steam-row">
                     { this.renderedLinuxFeatured() }
                 </div>
                 <div className="col text-center">
                     <h5>Featured games for Mac.</h5> 
                 </div>
-                <div className="row">
+                <div className="steam-row">
                     { this.renderMacFeatured() }
                 </div>
             </div>

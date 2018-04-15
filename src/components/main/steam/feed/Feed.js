@@ -12,7 +12,7 @@ class Feed extends Component{
                     <img src={ game.header_image }/> 
                     <div>
                         <a href={`http://store.steampowered.com/app/${ game.id }`}><h4 className="float-left steam-card-text">{ game.name }</h4></a>     
-                        <h4 className="float-right steam-card-text">${ game.final_price / 100 }</h4>
+                        <h4 className="float-right steam-card-text">{ game.final_price !== 0 ? "$" + ( game.final_price / 100 ) : "Free to Play" }</h4>
                     </div>
                 </div>
             )
@@ -28,7 +28,7 @@ class Feed extends Component{
                     <img src={ game.header_image }/>
                     <div>
                         <a href={`http://store.steampowered.com/app/${ game.id }`}><h4 className="float-left steam-card-text">{ game.name }</h4></a>     
-                        <h4 className="float-right steam-card-text">${ game.final_price / 100 }</h4>
+                        <h4 className="float-right steam-card-text">{ game.final_price !== 0 ? "$" + ( game.final_price / 100 ) : "Free to Play" }</h4>
                     </div>
                 </div>
             )
@@ -44,7 +44,7 @@ class Feed extends Component{
                     <img src={ game.header_image }/>
                     <div>
                         <a href={`http://store.steampowered.com/app/${ game.id }`}><h4 className="float-left steam-card-text">{ game.name }</h4></a>     
-                        <h4 className="float-right steam-card-text">${ game.final_price / 100 }</h4>
+                        <h4 className="float-right steam-card-text">{ game.final_price !== 0 ? "$" + ( game.final_price / 100 ) : "Free to Play" }</h4>
                     </div>
                 </div>
             )
@@ -61,19 +61,19 @@ class Feed extends Component{
 
         return(   
             <div className="container">
-                <div className="col text-center">
+                <div className="col text-center featured-heading">
                     <h5>Featured games for windows.</h5> 
                 </div>   
                 <div className="steam-row">
                     { this.renderWindowsFeatured() }
                 </div>
-                <div className="col text-center">
+                <div className="col text-center featured-heading">
                     <h5>Featured games for Linux.</h5> 
                 </div>
                 <div className="steam-row">
                     { this.renderedLinuxFeatured() }
                 </div>
-                <div className="col text-center">
+                <div className="col text-center featured-heading">
                     <h5>Featured games for Mac.</h5> 
                 </div>
                 <div className="steam-row">

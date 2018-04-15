@@ -51,3 +51,14 @@ h5{
 ::-webkit-scrollbar-thumb:hover {
     background: #99a6b366; 
 }
+
+.featured-heading{
+    background:#5e5c695c;
+    border-radius: 10px;
+    line-height: auto;
+    margin: 15px 20px 20px 0px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}

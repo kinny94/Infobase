@@ -34,7 +34,7 @@ class Search extends Component{
                             <div className="input-group">
                                 <input className="form-control form-control-lg" placeholder="Search for a user..." type="text" value={ this.state.value } onChange={ this.handleUserChange }/>
                                 <span className="input-group-btn">
-                                    <Link to={ `/steam/${ this.state.username }` }><button className="btn btn-outline-secondary" type="submit">
+                                    <Link to={ `steam/${ this.state.username }` }><button className="btn btn-outline-secondary" type="submit">
                                         <i className="fas fa-2x fa-search"></i>
                                     </button></Link>
                                 </span>

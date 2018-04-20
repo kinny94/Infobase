@@ -14,6 +14,7 @@ import Weather from './components/main/weather/Weather';
 import Books from './components/main/books/Books';
 import GooglePlus from './components/main/googleplus/GooglePlus';
 import Expedia from './components/main/expedia/Expedia';
+import SteamUser from './components/main/steam/user/SteamUser';
 
 class App extends Component {
 	render() {
@@ -30,6 +31,7 @@ class App extends Component {
 						<Route path="/books" exact component={ Books } />
 						<Route path="/googleplus" exact component={ GooglePlus } />
 						<Route path="/expedia" exact component={ Expedia } />
+						<Route path="/steam/:id" exact component={ SteamUser } />
 					</div>
 				</BrowserRouter>
 			</div>

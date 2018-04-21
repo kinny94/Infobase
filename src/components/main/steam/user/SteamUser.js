@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-
+import Profile from './Profile';
 class SteamUser extends Component{
 
 
@@ -34,6 +34,7 @@ class SteamUser extends Component{
             this.setState({
                 steamID: data.steamID64,
                 userProfile: {
+                    steamID: data.steamID64, 
                     name: data.steamID,
                     onlineState: data.onlineState,
                     stateMessage: data.stateMessage,
@@ -48,7 +49,6 @@ class SteamUser extends Component{
                     tradeBanState: data.tradeBanState
                 }
             });
-            console.log( this.state.userProfile );
         })
         .catch(e => {
             console.log(e);
@@ -65,7 +65,7 @@ class SteamUser extends Component{
             if( this.state.steamID === undefined ){
                 return <h3>No user found with username { this.state.username }. Rerouting to the search page.{ this.redirect() }</h3>
             }
-            return <h2>Got all the data. Check console </h2>
+            return <h2><Profile profileData={ this.state.userProfile }/></h2>
         }
     }
 

@@ -16,11 +16,17 @@ class SteamUser extends Component{
 
     componentWillMount(){
 
-        console.log( this.state.steamID );
+        document.body.classList.add( 'steam-background' );
+
+        let targetUrl;
+
+        if( isNaN( this.props.match.params.id ) ){
+            targetUrl = `http://steamid.co/php/api.php?action=steamID&id=${ this.state.username }&key=5A73D5947715DAECB09BBCE5C4948CC3`;
+        }else{
+            targetUrl = `https://steamid.co/php/api.php?action=steamID64&id=${ this.state.username }`;
+        }
 
         var proxyUrl = 'https://glacial-eyrie-67068.herokuapp.com/';
-        let targetUrl = `http://steamid.co/php/api.php?action=steamID&id=${ this.state.username }&key=5A73D5947715DAECB09BBCE5C4948CC3`;
-
 
         fetch(proxyUrl + targetUrl)
         .then(blob => blob.json())
@@ -53,13 +59,13 @@ class SteamUser extends Component{
 
     renderContent = () => {
         if( Object.keys(this.state.userProfile).length === 0 || this.state.steamID === "" ){
-            return <h3>Getting data for { this.state.username }</h3>
+            return <h2>Getting data for { this.state.username }</h2>
         }else{
 
             if( this.state.steamID === undefined ){
                 return <h3>No user found with username { this.state.username }. Rerouting to the search page.{ this.redirect() }</h3>
             }
-            return <h3>Got all the data. Check console </h3>
+            return <h2>Got all the data. Check console </h2>
         }
     }
 

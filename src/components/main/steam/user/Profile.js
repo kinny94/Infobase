@@ -39,7 +39,7 @@ class Profile extends Component{
                                 <h2>Summary</h2>
                             </div>
                             <div className="row text-center">
-                                <h2>{ this.state.userprofile.summary.replace(/<\/?[^>]+(>|$)/g, "") }</h2>
+                                <h2>{ this.state.userprofile.summary.replace(/<\/?[^>]+(>|$)/g, "")}</h2>
                             </div>
                         </div>
                     </div>

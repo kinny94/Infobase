@@ -253,3 +253,15 @@ input[type="submit"]:hover,
 .steamuser{
     padding-top: 10%;
 }
+
+.heading-4{
+    color: black;
+}
+
+.steam-card{
+    background: #00000036;
+}
+
+.nowrap {
+    white-space: nowrap ;
+  }

@@ -18,14 +18,37 @@ class Profile extends Component{
     }
 
     render(){
+
+        const style = {
+            background: "#00000036"
+        }
+
+        const p = {
+            color: "white",
+            fontSize: "0.6em"
+        }
         return(
             <div className="container">
                 <div className="row steamuser"> 
                     <div className="col">
-                        <div className="col">
-                            <img src={ this.state.userprofile.avatar }/><h2 className="float-left">{ this.state.userprofile.name }</h2>
+                        <div style={ style } className="card flex-row flex-wrap">
+                            <div className="card-header border-0">
+                                <img src={ this.state.userprofile.avatar } alt="" />
+                            </div>
+                            <div className="card-block px-2">
+                                <h4 className="card-title">Username: { this.state.userprofile.name }</h4>
+                                <p className="card-text">Steam Id: { this.state.userprofile.steamID }</p>
+                                <p className="card-text">Member Since: : { this.state.userprofile.memberSince }</p>
+                                <p className="card-text no-wrap">Location: { this.state.userprofile.location }</p>
+                                <a href="#" className="btn btn-primary">BUTTON</a>
+                            </div>
+                            <div className="w-100">
+                                <h4 className="text-center">Summary</h4>
+                            </div>
+                            <div className="card-footer w-100 text-muted">
+                                <p style={ p } className="text-center no-wrap">{ this.state.userprofile.summary.replace(/<\/?[^>]+(>|$)/g, "") }</p>
+                            </div>
                         </div>
-                        <h2 className="float-right">{ this.state.userprofile.steamID }</h2>
                     </div>
                 </div>
             </div>

@@ -20,28 +20,12 @@ class Profile extends Component{
     render(){
         return(
             <div className="container">
-                <div className="row steamuser">
-                    <div className ="main-container">
-                        <div className=" highlight">
-                            <h2>{ this.state.userprofile.name }</h2>
-                            <div className="row">
-                                <img src ={ this.state.userprofile.avatar } /> 
-                                <ul>
-                                    <li>Realname: { this.state.userprofile.realname }</li>
-                                    <li>Steam ID: { this.state.userprofile.steamID } </li>
-                                    <li>Member Since: { this.state.userprofile.memberSince }</li>
-                                    <li>Location: { this.state.userprofile.location }</li>
-                                    <li>Vac Banned Status: { this.state.userprofile.vacBanned ? "Yes" : "No" }</li>
-                                
-                                </ul>
-                            </div>
-                            <div className="row text-center">
-                                <h2>Summary</h2>
-                            </div>
-                            <div className="row text-center">
-                                <h2>{ this.state.userprofile.summary.replace(/<\/?[^>]+(>|$)/g, "")}</h2>
-                            </div>
+                <div className="row steamuser"> 
+                    <div className="col">
+                        <div className="col">
+                            <img src={ this.state.userprofile.avatar }/><h2 className="float-left">{ this.state.userprofile.name }</h2>
                         </div>
+                        <h2 className="float-right">{ this.state.userprofile.steamID }</h2>
                     </div>
                 </div>
             </div>

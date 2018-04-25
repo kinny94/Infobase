@@ -53,7 +53,22 @@ class SteamUser extends Component{
         .catch(e => {
             console.log(e);
             return e;
+        }).then(() => {
+            let targetUrl2 = `http://steamrep.com/util.php?op=getSteamProfileInfo&id=${ this.state.username }&tm=1524624416`;
+            var proxyUrl2 = 'https://glacial-eyrie-67068.herokuapp.com/';
+
+            fetch( proxyUrl2 + targetUrl2 )
+            .then(blob => blob.json())
+            .then(data => {
+                console.log( data );
+            })
+            .catch(e => {
+                console.log(e);
+                return e;
+            });
         });
+
+        
 
     }
 

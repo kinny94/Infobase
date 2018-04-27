@@ -40,7 +40,7 @@ class Profile extends Component{
                                 <p className="card-text">Steam Id: { this.state.userprofile.steamID }</p>
                                 <p className="card-text">Member Since: : { this.state.userprofile.memberSince }</p>
                                 <p className="card-text no-wrap">Location: { this.state.userprofile.location }</p>
-                                <a href="#" className="btn btn-primary">BUTTON</a>
+                                <a href={`https://steamcommunity.com/id/${ this.state.userprofile}`} className="btn btn-primary">Steam Profile</a>
                             </div>
                             <div className="w-100">
                                 <h4 className="text-center">Summary</h4>

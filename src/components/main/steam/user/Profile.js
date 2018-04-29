@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import FriendList from './FriendList';
 
 class Profile extends Component{
 
     state = {
-        userprofile: this.props.profileData
+        userprofile: this.props.profileData,
+        friendList: ''
     }
     componentWillMount(){
         document.body.classList.add( 'steam-background' );
@@ -22,8 +24,18 @@ class Profile extends Component{
         .then(( data ) => {
             return data.json()
         }).then(( res ) => {
-            console.log( res );
+            this.setState({
+                friendList: res
+            })
         });
+    }
+
+    renderComponent(){
+        if( this.state.friendList === '' ){
+            return <h2>Getting Friend User List...</h2>
+        }else{
+            return <FriendList list={ this.state.friendList } />
+        }
     }
 
     render(){
@@ -59,6 +71,9 @@ class Profile extends Component{
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="row steamuser">
+                    { this.renderComponent() }
                 </div>
             </div>
         )

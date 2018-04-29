@@ -15,6 +15,15 @@ class Profile extends Component{
 
     componentDidMount(){
         console.log( this.props.profileData );
+
+        var proxyUrl = 'https://glacial-eyrie-67068.herokuapp.com/';
+        let targetUrl = `http://api.steampowered.com/ISteamUser/GetFriendList/v0001/?key=5A73D5947715DAECB09BBCE5C4948CC3&steamid=${ this.props.profileData.steamID }&relationship=friend`;
+        fetch( proxyUrl + targetUrl )
+        .then(( data ) => {
+            return data.json()
+        }).then(( res ) => {
+            console.log( res );
+        });
     }
 
     render(){

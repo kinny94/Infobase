@@ -72,7 +72,7 @@ class Profile extends Component{
                         </div>
                     </div>
                 </div>
-                <div className="row steamuser">
+                <div className="row">
                     { this.renderComponent() }
                 </div>
             </div>
